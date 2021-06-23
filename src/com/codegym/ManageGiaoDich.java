@@ -84,18 +84,19 @@ public class ManageGiaoDich {
                 }
 
             }
-        }if(phanLoai == "Dat"){
-            for(GiaoDich g:giaoDich){
-                if(g.getPhanLoai().equals(ngayTinhTien)){
-                    if(g.getPhanLoai().equals("CaoCap")){
-                        System.out.println("Thành tiền: "+(Integer.parseInt(String.valueOf(g.getDienTich())) * Integer.parseInt(String.valueOf(g.getDonGia()))));
-                    }if(g.getPhanLoai().equals("Thuong")){
-                        System.out.println("Thành tiền: "+(Integer.parseInt(String.valueOf(g.getDienTich())) * Integer.parseInt(String.valueOf(g.getDonGia()))) /100 * 90);
+        }
+        if (phanLoai == "Dat") {
+            for (GiaoDich g : giaoDich) {
+                if (g.getPhanLoai().equals(ngayTinhTien)) {
+                    if (g.getPhanLoai().equals("CaoCap")) {
+                        System.out.println("Thành tiền: " + (Integer.parseInt(String.valueOf(g.getDienTich())) * Integer.parseInt(String.valueOf(g.getDonGia()))));
+                    }
+                    if (g.getPhanLoai().equals("Thuong")) {
+                        System.out.println("Thành tiền: " + (Integer.parseInt(String.valueOf(g.getDienTich())) * Integer.parseInt(String.valueOf(g.getDonGia()))) / 100 * 90);
                     }
                 }
             }
         }
-
 
     }
 
@@ -103,5 +104,15 @@ public class ManageGiaoDich {
         Collections.sort(giaoDich, sortGiaoDich);
     }
 
+    public void search() {
+        System.out.println("Nhập ngày cần tìm kiếm:");
+        String index2 = scanner.nextLine();
+        for (GiaoDich g : giaoDich) {
+            if (g.getNgayGiaoDich().equals(index2)) {
+                System.out.println(g);
+            }
+        }
+
+    }
 
 }

@@ -69,14 +69,15 @@ public class Main {
                     switch (select){
                         case 1: {
                             System.out.println("Nhập ngày cần tính:");
-                            manageGiaoDich.thanhTien("Nha");
+                            manageGiaoDich.tinhTienNgay("Nha");
                         }break;
                         case 2:{
                             System.out.println("Nhập ngày cần tính:");
-                            manageGiaoDich.thanhTien("Dat");
+                            manageGiaoDich.tinhTienNgay("Dat");
                         }break;
                     }
-                }
+                }break;
+                case 5: manageGiaoDich.search();break;
             }
 
         }
